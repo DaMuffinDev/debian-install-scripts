@@ -30,7 +30,7 @@ tar xvf Python-3.10.7.tar.xz
 cd Python-3.10.7
 ./configure --enable-optimizations
 make -j 2
-sudo make alt install
+sudo make altinstall
 
 # Optional Python Shortcut
 function python {
