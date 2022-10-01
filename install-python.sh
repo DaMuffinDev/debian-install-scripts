@@ -20,14 +20,19 @@ sudo apt-get install -y python3-setuptools
 sudo apt-get install -y wget
 
 # Installation Directory
-mkdir /Downloads/Python310
+mkdir ~/Downloads/Python310
 cd /Downloads/Python310
 
 # Get Python Tar File
 wget https://www.python.org/ftp/python/3.10.7/Python-3.10.7.tar.xz
 tar xvf Python-3.10.7.tar.xz
 
+cd Python-3.10.7
+./configure --enable-optimizations
+make -j 2
+sudo make alt install
+
 # Optional Python Shortcut
-python {
+function python {
     python3.10 $1
 }
